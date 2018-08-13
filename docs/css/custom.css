@@ -1,5 +1,5 @@
 body {
-  font-family: 'Lato';
+  font-family: sans-serif;
   position: relative;
 }
 
@@ -9,7 +9,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Catamaran';
+  /*font-family: 'Catamaran';*/
   font-weight: 800 !important;
 }
 
@@ -158,10 +158,13 @@ header.masthead .bg-circle-4 {
   font-weight: bold;
   height: 80vh;
   padding-top: 30vh;
-  background: grey;
+  /*background: lightgrey;*/
   display: block;
 }
 
+.winningBenifits {
+background: linear-gradient(#fff, rgb(23,162,184), #fff)
+}
 
 @media (min-width: 992px) {
   header.masthead {

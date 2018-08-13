@@ -14,7 +14,7 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="css/one-page-wonder.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
 
 </head>
 
@@ -44,7 +44,23 @@
     </div>
   </header>
 
-  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+<div class="container-fluid">
+  <div class="row text-center">
+
+    <div class="bg-primary text-light col-md-6 p-lg-5 mx-auto">
+      <h1 class="display-4">In our book, everyone should be a winner</h1>
+
+    </div>
+
+    <div class="bg-orange col-md-6 p-lg-5 mx-auto">
+      <h1 class="display-4">Just look at the number of people in the world:</h1>
+      <h1 id="numberCounter" class="number"></h1>
+    </div>
+  </div>
+</div>
+
+
+  <div class="winningBenifits pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <h1 class="display-4">How to win like a pro</h1>
     <p class="lead font-italic">You always win when you gamble with AI</p>
   </div>
@@ -52,7 +68,7 @@
   <div class="card-deck m-3 text-center">
     <div class="card mb-4 box-shadow">
       <div class="card-header bg-primary">
-        <h4 class="my-0 font-weight-normal">ONE:</h4>
+        <h4 class="text-light">1</h4>
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Go to this webpage</h1>
@@ -63,7 +79,7 @@
     </div>
     <div class="card mb-4 box-shadow">
       <div class="card-header bg-primary">
-        <h4 class="my-0 font-weight-normal">TWO:</h4>
+        <h4 class="text-light">2</h4>
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Scroll down to the win button</h1>
@@ -74,7 +90,7 @@
     </div>
     <div class="card mb-4 box-shadow">
       <div class="card-header bg-primary">
-        <h4 class="my-0 font-weight-normal">THREE:</h4>
+        <h4 class="text-light">3</h4>
       </div>
       <div class="card-body">
         <h1 class="card-title pricing-card-title">Click the button</h1>
@@ -99,7 +115,7 @@
 
 
 
-  <div id="generatorSection" class="generatorSection text-center">
+  <div id="generatorSection" class="generatorSection text-center bg-info">
 
     <div class="generator">
       <div id="pball">
@@ -237,8 +253,8 @@
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="jquery.inview.js"></script>
 
 </body>
 
