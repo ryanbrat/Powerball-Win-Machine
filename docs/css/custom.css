@@ -118,39 +118,32 @@ header.masthead .bg-circle-4 {
   height: 40em;
 }
 
-#pball {
-    display:inline-block;
-    height:4em;
-    width:4em;
-    /*text-align:center;*/
-    /*border-radius:5em;*/
-    background: url(../img/ball.png);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    background-size: cover;
-    line-height:4em;
-    margin-right:1em;
-    border:0;
-    /*box-shadow: inset 1px 1px 2px 1px;*/
+.pball {
+  display: none;
+  height:4em;
+  width:4em;
+  background: url(../img/ball.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  line-height:4em;
+  margin-right:1em;
+  border:0;
+}
 
-  }
   #pball6 {
-    display:inline-block;
-    height:4em;
-    width:4em;
-    /*text-align:center;*/
-    border-radius:5em;
+    border-radius: 5em;
     background: #800 url(../img/ball.png);
     background-blend-mode: multiply;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: scroll;
-    background-size: cover;
-    line-height:4em;
-    margin-right:1em;
-    border:0;
+  }
 
+  .win-button-animation {
+    display: none;
+  }
+
+  .inline-block {
+    display: inline-block !important;
   }
 
  .generatorSection {
@@ -158,13 +151,13 @@ header.masthead .bg-circle-4 {
   font-weight: bold;
   height: 80vh;
   padding-top: 30vh;
-  /*background: lightgrey;*/
   display: block;
 }
 
 .winningBenifits {
 background: linear-gradient(#fff, rgb(23,162,184), #fff)
 }
+
 
 @media (min-width: 992px) {
   header.masthead {
