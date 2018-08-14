@@ -1,3 +1,33 @@
+const apiJSON = {
+   "date": "2018-08-14",
+   "id": "United%20States"
+}
+
+let populationToday;
+
+var request = new XMLHttpRequest();
+
+request.open('GET', `http://api.population.io:80/1.0/population/World/${apiJSON.date}/`, true);
+request.onload = function () {
+
+  // Begin accessing JSON data here
+  var data = JSON.parse(this.response);
+
+  if (request.status >= 200 && request.status < 400) {
+    populationToday = printPopulation(data);
+  } else {
+    console.log('error');
+  }
+}
+
+request.send();
+
+function printPopulation(population) {
+  let totalPop = population.total_population.population;
+   const message = `${totalPop}`;
+   return message;
+}
+
 document.addEventListener("DOMContentLoaded", function(event) {
 
   const pballnums = document.querySelectorAll('.pballnums');
@@ -27,9 +57,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (isInView) {
 
       $({
-        someValue: 0
+        someValue: populationToday
       }).animate({
-        someValue: 450000
+        // someValue: printPopulation(data)
       }, {
         duration: 2500,
         easing: 'swing', // can be anything
