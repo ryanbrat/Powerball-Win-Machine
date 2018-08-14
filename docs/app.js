@@ -24,8 +24,9 @@ request.send();
 
 function printPopulation(population) {
   let totalPop = population.total_population.population;
-   const message = `${totalPop}`;
-   return message;
+  //  const message = ${totalPop};
+
+   return totalPop;
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -57,9 +58,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
     if (isInView) {
 
       $({
-        someValue: populationToday
+        someValue: 0
       }).animate({
-        // someValue: printPopulation(data)
+        someValue: populationToday
       }, {
         duration: 2500,
         easing: 'swing', // can be anything
