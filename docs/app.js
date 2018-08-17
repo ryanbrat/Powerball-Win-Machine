@@ -1,32 +1,25 @@
-const apiJSON = {
-   "date": "2018-08-14",
-   "id": "United%20States"
-}
-
-let populationToday;
-
+//API request to worldbank for world population, will retrieve the most up to date data
 var request = new XMLHttpRequest();
-
-request.open('GET', `http://api.population.io:80/1.0/population/World/${apiJSON.date}/`, true);
+//GET
+request.open('GET', `https://api.worldbank.org/v2/countries/wld/indicators/SP.POP.TOTL?format=json`, true);
 request.onload = function () {
-
-  // Begin accessing JSON data here
+  // Begin accessing JSON data
   var data = JSON.parse(this.response);
-
+  // Check for errors
   if (request.status >= 200 && request.status < 400) {
-    populationToday = printPopulation(data);
+    //Grab the population
+    population = data[1][0].value;
   } else {
-    console.log('error');
+    //Show error if console.error
+    console.error(request.message);
   }
 }
-
 request.send();
 
+let population;
 function printPopulation(population) {
-  let totalPop = population.total_population.population;
-  //  const message = ${totalPop};
-
-   return totalPop;
+  const message = `${population/68}`;
+  return message;
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
@@ -60,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
       $({
         someValue: 0
       }).animate({
-        someValue: populationToday
+        someValue: printPopulation(population)
       }, {
         duration: 2500,
         easing: 'swing', // can be anything
@@ -79,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
         return val;
       }
-    } else {
-
     }
   });
 
@@ -94,12 +85,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
         $('.win-button-animation').addClass('inline-block animated zoomInUp delay-3s')
 
       }
-    } else {
-
     }
   });
-
-
-
-
 });
